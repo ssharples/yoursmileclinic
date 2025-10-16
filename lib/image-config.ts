@@ -94,6 +94,8 @@ export function getOptimizedImageUrl(
   imageUrl: string,
   preset: keyof typeof IMAGE_PRESETS
 ): string {
-  const { width, height, quality } = IMAGE_PRESETS[preset];
+  const presetConfig = IMAGE_PRESETS[preset];
+  // Use the preset config for future image optimization
+  // Currently returns the base URL, but structure is ready for Vercel Image Optimization
   return imageUrl;
 }
